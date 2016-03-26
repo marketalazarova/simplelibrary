@@ -4,31 +4,59 @@
 <html lang="en">
 <head>
     <title><?php _e("PUBLICATION_ADD_HTMLTITLE"); ?></title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <form action="../formHandler.php" method="post">
-        <p>
-            <label for="isbn"><strong><?php _e("PUBLICATION_ADD_ISBN"); ?></strong></label>
-            <input name="isbn" type="text" size="30">
-        </p>
-        <p>
-            <label for="title"><strong><?php _e("PUBLICATION_ADD_TITLE"); ?></strong></label>
-            <input name="title" type="text" size="128">
-        </p>
-        <p>
-            <label for="numpages"><strong><?php _e("PUBLICATION_ADD_NUMPAGES"); ?></strong></label>
-            <input name="numpages" type="number" size="4">
-        </p>
-        <p>
-            <label for="edition"><strong><?php _e("PUBLICATION_ADD_EDITION"); ?></strong></label>
-            <input name="edition" type="number" size="4">
-        </p>
-        <p>
-            <label for="published"><strong><?php _e("PUBLICATION_ADD_PUBLISHED"); ?></strong></label>
-            <input name="published" type="date" size="4">
-        </p>
-        <input type="submit" value="<?php _e("PUBLICATION_ADD_SUBMIT"); ?>">
-    </form>
+    <div class="container">
+        <?php if(isset($_GET['success'])): ?>
+            <div class="row">&nbsp;</div>
+            <div class="alert alert-success">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <?php _e("PUBLICATION_ADD_SUCCESS"); ?>
+            </div>
+        <?php endif; ?>
+        <h2 class="text-center"><?php _e("PUBLICATION_ADD_HTMLTITLE"); ?></h2>
+        <hr>
+        <form class="form-horizontal" role="form" action="../formHandler.php" method="post">
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="publication[isbn]"><?php _e("PUBLICATION_ADD_ISBN"); ?></label>
+                <div class="col-sm-6">
+                    <input class="form-control" name="publication[isbn]" type="text" size="30">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="publication[title]"><?php _e("PUBLICATION_ADD_TITLE"); ?></label>
+                <div class="col-sm-6">
+                    <input class="form-control" name="publication[title]" type="text" size="128">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="publication[edition]"><?php _e("PUBLICATION_ADD_EDITION"); ?></label>
+                <div class="col-sm-6">
+                    <input class="form-control" name="publication[edition]" type="number" size="4">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="publication[numpages]"><?php _e("PUBLICATION_ADD_NUMPAGES"); ?></label>
+                <div class="col-sm-6">
+                    <input class="form-control" name="publication[numpages]" type="number" size="4">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="publication[published]"><?php _e("PUBLICATION_ADD_PUBLISHED"); ?></label>
+                <div class="col-sm-6">
+                    <input class="form-control" name="publication[published]" type="date" size="4">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-6">
+                    <button type="submit" class="btn btn-default"><?php _e("PUBLICATION_ADD_SUBMIT"); ?></button>
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
