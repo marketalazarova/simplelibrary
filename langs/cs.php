@@ -8,4 +8,5 @@ $translations = [
     "PUBLICATION_ADD_EDITION"   => "Vydání",
     "PUBLICATION_ADD_PUBLISHED" => "Datum publikace",
     "PUBLICATION_ADD_SUBMIT"    => "Přidat",
+    "PUBLICATION_ADD_SUCCESS"   => "Publikace byla úspěšně přidána!",
 ];

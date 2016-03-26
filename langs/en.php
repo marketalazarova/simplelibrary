@@ -8,4 +8,5 @@ $translations = [
     "PUBLICATION_ADD_EDITION"   => "Edition",
     "PUBLICATION_ADD_PUBLISHED" => "Published date",
     "PUBLICATION_ADD_SUBMIT"    => "Add",
+    "PUBLICATION_ADD_SUCCESS"   => "Publication has been added successfully.",
 ];

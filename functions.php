@@ -8,6 +8,8 @@ require("config.php");
  * @return resource MySQL link
  */
 function getDb() {
+    global $cfg;
+
     return mysqli_connect($cfg["dbHost"], $cfg["dbUser"], $cfg["dbPass"], $cfg["dbBase"]);
 }
 
@@ -33,4 +35,12 @@ function __($word) {
  */
 function _e($word) {
     echo __($word);
+}
+
+
+function getInsertQuery($table, $insertArray) {
+    return  sprintf("INSERT INTO `%s`(`%s`) VALUES('%s')",
+            $table,
+            implode("`,`", array_keys($insertArray)),
+            implode("','", $insertArray));
 }
