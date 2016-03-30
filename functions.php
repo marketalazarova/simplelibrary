@@ -38,6 +38,13 @@ function _e($word) {
 }
 
 
+/**
+ * Gets query for insert to database
+ *
+ * @param  string $table       name of table
+ * @param  array  $insertArray array of values
+ * @return string              query
+ */
 function getInsertQuery($table, $insertArray) {
     return  sprintf("INSERT INTO `%s`(`%s`) VALUES('%s')",
             $table,
