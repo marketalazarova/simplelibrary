@@ -34,7 +34,7 @@ CREATE TABLE `publications` (
   `published` date NOT NULL,
   `created_at` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
 
 CREATE TABLE `publishers` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
