@@ -51,11 +51,28 @@
                     <input class="form-control" name="publication[published]" type="date" size="4" required>
                 </div>
             </div>
+            
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="publication[author]"><?php _e("PUBLICATION_ADD_AUTHOR"); ?></label>
+                <div class="col-sm-6">
+                    <input class="form-control" name="publication[author]" type="option" size="30">
+                    <select>
+                      <option value="aut">
+                      <?php 
+                      getDb(authors);
+                      $vysledek = mysql_query("SELECT firstname,lastname FROM authors); 
+
+                      _e("firstname", "lastname"); ?> </option>
+                    </select>
+                </div>
+            </div>
+
             <div class="form-group">
                 <div class="col-sm-offset-3 col-sm-6">
                     <button type="submit" class="btn btn-default"><?php _e("PUBLICATION_ADD_SUBMIT"); ?></button>
                 </div>
             </div>
+
         </form>
     </div>
 </body>
