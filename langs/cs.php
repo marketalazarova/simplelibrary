@@ -9,4 +9,13 @@ $translations = [
     "PUBLICATION_ADD_PUBLISHED" => "Datum publikace",
     "PUBLICATION_ADD_SUBMIT"    => "Přidat",
     "PUBLICATION_ADD_SUCCESS"   => "Publikace byla úspěšně přidána!",
+    "AUTHOR_ADD_HTMLAUTHOR"		=> "Přidat autora",	
+	"AUTHOR_ADD_FIRSTNAME"		=> "Jméno",
+	"AUTHOR_ADD_LASTNAME"		=> "Příjmení",
+	"AUTHOR_ADD_BORN"			=> "Datum narození",
+	"AUTHOR_ADD_DECEASED"		=> "Datum úmrtí",
+	"AUTHOR_ADD_NATIONALIT"		=> "Národnost",
+	"AUTHOR_ADD_CREATEDAT"		=> "Datum vytvoření publikace"
+	"AUTHOR_ADD_SUBMIT"			=> "Přidat",
+	"AUTHOR_ADD_SUCCESS"   		=> "Autor/ka byl/a úspěšně přidán/a!",
 ];
